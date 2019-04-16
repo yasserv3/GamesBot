@@ -138,10 +138,10 @@ client.on('message', puz => {
         
         var x3 = Math.floor(Math.random()*x.length)
         puz.channel.send(`السؤال هو:  __**${x[x3]}**__
-لديك 20 ثانية للاجابة`).then(msg1=> {
+لديك 30 ثانية للاجابة`).then(msg1=> {
             var r = puz.channel.awaitMessages(msg => msg.content == x2[x3], {
                 maxMatches : 1,
-                time : 20000,
+                time : 30000,
                 errors : ['time']
             })
         r.catch(() => {
